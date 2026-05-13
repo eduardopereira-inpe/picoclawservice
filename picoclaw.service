@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 # Replace with the actual path to your picoclaw binary
-ExecStart=/home/eduardo/Projects/picoclaw/picoclaw gateway
+ExecStart=/home/<user>/picoclaw/picoclaw gateway
 Restart=always
 RestartSec=5
 User=eduardo
