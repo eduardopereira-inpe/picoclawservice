@@ -1,0 +1,16 @@
+[Unit]
+Description=PicoClaw Gateway AI Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Replace with the actual path to your picoclaw binary
+ExecStart=/home/eduardo/Projects/picoclaw/picoclaw gateway
+Restart=always
+RestartSec=5
+User=eduardo
+WorkingDirectory=/home/eduardo
+Environment=HOME=/home/eduardo
+
+[Install]
+WantedBy=multi-user.target
