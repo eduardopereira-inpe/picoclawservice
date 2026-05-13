@@ -1,0 +1,21 @@
+[Unit]
+Description=PicoClaw Launcher Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Path to your picoclaw-launcher binary
+ExecStart=/home/<user>/picoclaw/picoclaw-launcher -public
+# Optional: Use -public flag if accessing the WebUI from another device
+# ExecStart=/usr/local/bin/picoclaw-launcher -public
+
+Restart=always
+RestartSec=5
+User=eduardo
+WorkingDirectory=/home/eduardo
+Environment=HOME=/home/eduardo
+# Optional: Specify a custom config file path
+# Environment=PICOCLAW_CONFIG=/home/<username>/.picoclaw/launcher-config.json
+
+[Install]
+WantedBy=multi-user.target
