@@ -1,5 +1,11 @@
 # picoclawservice
 
+Install and start service of picoclaw in raspberry pi 4/5
+ ```bash
+chmod +x install-picoclaw.sh
+./install-picoclaw.sh
+```
+
 This repository contains example `systemd` service files to run **PicoClaw** automatically on Linux startup.
 
 ## Service Location
